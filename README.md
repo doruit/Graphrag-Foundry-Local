@@ -80,6 +80,9 @@ git clone https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2 .
 # Install sentence-transformers
 pip install sentence-transformers flask
 
+# Copy the server script to the models/all-minilm-l6-v2 folder 
+cp /embeddings_server.py /models/all-minilm-l6-v2/  
+
 # Start the embedding server
 python server.py
 ```
