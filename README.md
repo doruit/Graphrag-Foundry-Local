@@ -1,6 +1,6 @@
-# GraphRAG with Foundry Local
+# Run GraphRAG locally with Foundry Local
 
-This repository contains a setup for running GraphRAG (Retrieval-Augmented Generation with Graph) using locally deployed models via Foundry Local.
+This repository contains a setup for running GraphRAG (Retrieval-Augmented Generation with Graph) using locally deployed models via Foundry Local. Whenever you don't want to rely on external APIs, you can use this setup to run the Mistral-7B model and an embedding model (all-MiniLM-L6-v2) on your own machine. 
 
 ## Setup Instructions
 
