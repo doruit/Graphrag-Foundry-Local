@@ -84,10 +84,10 @@ pip install sentence-transformers flask
 cp /embeddings_server.py /models/all-minilm-l6-v2/  
 
 # Start the embedding server
-python server.py
+python embeddings_server.py
 ```
 
-The embedding server will run on port 5274. Ensure that the `server.py` file is available in the `models/all-minilm-l6-v2` directory.
+The embedding server will run on port 5274. Ensure that the `embeddings_server.py` file is available in the `models/all-minilm-l6-v2` directory.
 
 ### 6. Update Configuration
 
@@ -122,7 +122,27 @@ In a new terminal window (with the virtual environment activated):
 graphrag index --root ./ragtest
 ```
 
-This will start the indexing process using your locally running models.
+This will start the indexing process using your locally running models. The GraphRAG indexer will show the progress and any errors in the terminal:
+
+![alt text](media/indexing_progress.png)
+
+When the indexing is complete, you will have a fully functional GraphRAG setup with local models. You can now query your indexed data using the GraphRAG CLI (or API):
+
+Global search example:
+```bash
+graphrag query \
+--root ./ragtest \
+--method global \
+--query "What are the top themes in this story?"
+```
+
+Local search example:
+```bash
+graphrag query \
+--root ./ragtest \
+--method local \
+--query "Who is Scrooge and what are his main relationships?"
+```
 
 ## Troubleshooting
 
